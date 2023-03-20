@@ -7,12 +7,14 @@ public class Gato {
     private String cor;
     private Integer idade;
 
-    public Gato() {}
-
     public Gato(String nome, String cor, Integer idade) {
         this.nome = nome;
         this.cor = cor;
         this.idade = idade;
+    }
+
+    public Gato() {
+
     }
 
     public String getNome() {
@@ -44,7 +46,7 @@ public class Gato {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Gato gato = (Gato) o;
-        return Objects.equals(nome, gato.nome) && Objects.equals(cor, gato.cor) && Objects.equals(idade, gato.idade);
+        return nome.equals(gato.nome) && cor.equals(gato.cor) && idade.equals(gato.idade);
     }
 
     @Override
